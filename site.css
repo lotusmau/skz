@@ -1,0 +1,20 @@
+thead {
+    color: rgb(30, 26, 219);
+}
+
+table,
+th,
+td {
+    border: 1px solid;
+}
+
+.h1info {
+    text-align: center;
+}
+
+.outerdiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+}
+
