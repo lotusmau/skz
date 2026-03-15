@@ -84,11 +84,11 @@ function handleGuess(e) {
         feedback.className = "feedback wrong";
     }
 
-    updateScore();
-
     // Remove from remaining
     var pos = remaining.indexOf(currentIndex);
     remaining.splice(pos, 1);
+
+    updateScore();
 
     // Disable buttons briefly, then move on
     renderButtons(false);
