@@ -1,5 +1,14 @@
 var members = ["Bang Chan", "Lee Know", "Changbin", "Hyunjin", "Han", "Felix", "Seungmin", "I.N"];
-var pictures = ["bang1.jpg", "leeknow.jpg", "changbin.jpg", "hyunjin.webp", "Han.webp", "Felix.jpg", "Seungmin.jpg", "I.n.jpg"];
+var pictures = [
+    ["bang1.jpg", "bang2.jpg", "bang3.jpg"],
+    ["leeknow.jpg", "leeknow2.jpg", "leeknow3.jpg"],
+    ["changbin.jpg", "changbin2.jpg", "changbin3.jpg"],
+    ["hyunjin.webp", "hyunjin2.webp", "hyunjin3.jpg"],
+    ["Han.webp", "Han2.webp", "Han3.webp"],
+    ["Felix.jpg", "Felix2.jpg", "Felix3.jpg"],
+    ["Seungmin.jpg", "Seungmin2.jpg", "Seungmin3.jpg"],
+    ["I.n.jpg", "I.n2.jpg", "I.n3.jpg"]
+];
 var answers = [];
 
 // Indices we haven't guessed yet
@@ -27,7 +36,9 @@ function pickNext() {
     var randomPos = Math.floor(Math.random() * remaining.length);
     currentIndex = remaining[randomPos];
 
-    document.getElementById("quiz-image").src = pictures[currentIndex];
+    var memberPics = pictures[currentIndex];
+    var randomPic = memberPics[Math.floor(Math.random() * memberPics.length)];
+    document.getElementById("quiz-image").src = randomPic;
     document.getElementById("feedback").textContent = "";
     document.getElementById("feedback").className = "feedback";
     document.getElementById("quiz-image-container").style.display = "block";
