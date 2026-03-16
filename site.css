@@ -218,7 +218,7 @@ td {
 }
 
 /* Image Container */
-#gruppe1, .outerdiv > div:last-child {
+#gruppe1 {
     position: relative;
     overflow: hidden;
     border-radius: 25px;
@@ -329,9 +329,17 @@ a:hover {
     50% { opacity: 0.5; transform: scale(0.8); }
 }
 
+.right-column {
+    display: flex;
+    flex-direction: column;
+}
+
 #quiz {
     text-align: center;
-    margin-top: 25px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 #quiz a {
