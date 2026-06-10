@@ -220,12 +220,56 @@ td {
 /* Image Container */
 #gruppe1 {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 25px;
     border: 4px solid #ffb6c1;
     box-shadow:
         0 10px 30px rgba(255, 105, 180, 0.3),
         0 0 0 6px rgba(255, 192, 203, 0.3);
+}
+
+#gruppe1 > img {
+    border-radius: 20px;
+}
+
+.member-spot {
+    position: absolute;
+    width: 12%;
+    height: 14%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.member-spot::after {
+    content: attr(data-name);
+    position: absolute;
+    left: 110%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #ff69b4, #ff85c1);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 18px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 4px 12px rgba(255, 105, 180, 0.4);
+    transition: opacity 0.25s ease;
+    z-index: 3;
+}
+
+.member-spot:hover {
+    background: rgba(255, 105, 180, 0.25);
+    box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.5);
+}
+
+.member-spot:hover::after {
+    opacity: 1;
 }
 
 img {
